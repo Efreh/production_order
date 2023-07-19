@@ -12,7 +12,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="800.0">
@@ -43,9 +42,9 @@
       <Label alignment="CENTER" layoutX="427.0" layoutY="26.0" prefHeight="25.0" prefWidth="150.0" text="Участок" textAlignment="CENTER" />
       <Label alignment="CENTER" layoutX="600.0" layoutY="26.0" prefHeight="25.0" prefWidth="150.0" text="Номер смены" textAlignment="CENTER" />
       <ChoiceBox layoutX="600.0" layoutY="51.0" prefHeight="30.0" prefWidth="150.0" />
-      <TextField layoutX="64.0" layoutY="111.0" prefHeight="30.0" prefWidth="200.0" promptText="Фамилия Имя Отчество" />
-      <TextField layoutX="537.0" layoutY="111.0" prefHeight="30.0" prefWidth="200.0" promptText="Должность" />
-      <TableView layoutY="169.0" prefHeight="380.0" prefWidth="800.0">
+      <TextField layoutX="63.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" promptText="Фамилия Имя Отчество" />
+      <TextField layoutX="567.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" promptText="Должность" />
+      <TableView layoutY="325.0" prefHeight="219.0" prefWidth="800.0">
         <columns>
           <TableColumn prefWidth="31.0" text="№" />
           <TableColumn prefWidth="70.0" text="Заказ" />
@@ -64,5 +63,26 @@
             <TableColumn prefWidth="89.0" text="Вермя&#10;установки &#10;кострукций" />
         </columns>
       </TableView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="№ п/п" wrapText="true" />
+      <TextField editable="false" layoutX="14.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label alignment="CENTER" layoutX="64.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Заказ" />
+      <TextField layoutX="64.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label alignment="CENTER" layoutX="114.0" layoutY="151.0" prefHeight="40.0" prefWidth="120.0" text="Позиция заказа" />
+      <TextField layoutX="113.0" layoutY="191.0" prefHeight="40.0" prefWidth="120.0" />
+      <Label alignment="CENTER" layoutX="233.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Колл-во&#10;шт." textAlignment="CENTER" />
+      <TextField layoutX="233.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label alignment="CENTER" layoutX="283.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Толщина&#10;детали" textAlignment="CENTER" />
+      <TextField layoutX="283.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label alignment="CENTER" layoutX="333.0" layoutY="151.0" prefHeight="40.0" prefWidth="60.0" text="Колл-во&#10;отверстий" textAlignment="CENTER" />
+      <TextField layoutX="333.0" layoutY="191.0" prefHeight="40.0" prefWidth="60.0" />
+      <Label alignment="CENTER" layoutX="394.0" layoutY="151.0" prefHeight="40.0" prefWidth="310.0" text="Виды обработки" />
+      <ChoiceBox layoutX="394.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox layoutX="474.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox layoutX="554.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox layoutX="634.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <Label layoutX="694.0" layoutY="151.0" prefHeight="40.0" prefWidth="108.0" text="Время установки&#10;конструкций" textAlignment="RIGHT" />
+      <TextField layoutX="714.0" layoutY="191.0" prefHeight="40.0" prefWidth="75.0" />
+      <Button layoutX="500.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Добавить позицию" />
+      <Button layoutX="70.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Сбросить позицию" />
    </children>
 </AnchorPane>
