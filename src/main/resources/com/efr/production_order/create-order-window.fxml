@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="create_order_window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.efr.production_order.CreateOrderWindowController">
+   <children>
+      <Button fx:id="createAndSave_order_button" layoutX="650.0" layoutY="550.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Создать и  сохранить наряд" textAlignment="CENTER" wrapText="true" />
+      <DatePicker fx:id="date_picker" layoutX="63.0" layoutY="51.0" prefHeight="30.0" prefWidth="150.0" promptText="Выберите дату" />
+      <ChoiceBox fx:id="working_shift_choiceBox" layoutX="247.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" />
+      <Button fx:id="search_order_button" layoutY="550.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Поиск наряда" />
+      <Label fx:id="working_shift_label" alignment="CENTER" layoutX="247.0" prefHeight="25.0" prefWidth="150.0" text="Номер смены" textAlignment="CENTER" />
+      <ChoiceBox fx:id="sector_choiceBox" layoutX="430.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label fx:id="sector_label" alignment="CENTER" layoutX="430.0" prefHeight="25.0" prefWidth="150.0" text="Участок" textAlignment="CENTER" />
+      <Label fx:id="work_center_label" alignment="CENTER" layoutX="603.0" prefHeight="25.0" prefWidth="150.0" text="Рабочий центр" textAlignment="CENTER" />
+      <ChoiceBox fx:id="work_center_choiceBox" layoutX="603.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" />
+      <TextField fx:id="first_last_name_textField" layoutX="63.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" promptText="Фамилия Имя Отчество" />
+      <TableView fx:id="order_table" layoutY="325.0" prefHeight="219.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="position_number_column" prefWidth="31.0" text="№" />
+          <TableColumn fx:id="order_number_column" prefWidth="70.0" text="Заказ" />
+            <TableColumn fx:id="order_position_column" prefWidth="122.0" text="Позиция" />
+            <TableColumn fx:id="detail_amount_column" prefWidth="59.0" text="Колл-тво" />
+            <TableColumn fx:id="detail_thickness_column" prefWidth="63.0" text="Толщина &#10;  детали" />
+            <TableColumn fx:id="detail_hole_amount_column" prefWidth="65.0" text="Колл-во&#10;отверстий" />
+            <TableColumn fx:id="type_of_processing_column" prefWidth="303.0" text="Виды обработки">
+               <columns>
+                  <TableColumn fx:id="first_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 1" />
+                  <TableColumn fx:id="second_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 2" />
+                  <TableColumn fx:id="third_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 3" />
+                  <TableColumn fx:id="fourth_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 4" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="construction_installation_time_column" prefWidth="89.0" text="Вермя&#10;установки &#10;кострукций" />
+        </columns>
+      </TableView>
+      <Label fx:id="order_item_pos_label" alignment="CENTER" layoutX="14.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="№ п/п" wrapText="true" />
+      <TextField fx:id="order_item_pos_textField" editable="false" layoutX="14.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label fx:id="order_number_label" alignment="CENTER" layoutX="64.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Заказ" />
+      <TextField fx:id="order_number_textField" layoutX="64.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label fx:id="order_position_label" alignment="CENTER" layoutX="114.0" layoutY="151.0" prefHeight="40.0" prefWidth="120.0" text="Позиция заказа" />
+      <TextField fx:id="order_position_textField" layoutX="113.0" layoutY="191.0" prefHeight="40.0" prefWidth="120.0" />
+      <Label fx:id="detail_amount_label" alignment="CENTER" layoutX="233.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Колл-во&#10;шт." textAlignment="CENTER" />
+      <TextField fx:id="detail_amount_textField" layoutX="233.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label fx:id="detail_thickness_label" alignment="CENTER" layoutX="283.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="Толщина&#10;детали" textAlignment="CENTER" />
+      <TextField fx:id="detail_thickness_textField" layoutX="283.0" layoutY="191.0" prefHeight="40.0" prefWidth="50.0" />
+      <Label fx:id="detail_hole_amount_label" alignment="CENTER" layoutX="333.0" layoutY="151.0" prefHeight="40.0" prefWidth="60.0" text="Колл-во&#10;отверстий" textAlignment="CENTER" />
+      <TextField fx:id="detail_hole_amount_textField" layoutX="333.0" layoutY="191.0" prefHeight="40.0" prefWidth="60.0" />
+      <Label fx:id="type_of_processing_label" alignment="CENTER" layoutX="394.0" layoutY="151.0" prefHeight="40.0" prefWidth="310.0" text="Виды обработки" />
+      <ChoiceBox fx:id="first_type_of_processing_textField" layoutX="394.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox fx:id="second_type_of_processing_textField" layoutX="474.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox fx:id="third_type_of_processing_textField" layoutX="554.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <ChoiceBox fx:id="fourth_type_of_processing_textField" layoutX="634.0" layoutY="191.0" prefHeight="40.0" prefWidth="80.0" />
+      <Label fx:id="construction_installation_time_label" layoutX="694.0" layoutY="151.0" prefHeight="40.0" prefWidth="108.0" text="Время установки&#10;конструкций" textAlignment="RIGHT" />
+      <TextField fx:id="construction_installation_time_textField" layoutX="714.0" layoutY="191.0" prefHeight="40.0" prefWidth="75.0" />
+      <Button fx:id="add_position_button" layoutX="500.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Добавить позицию" />
+      <Button fx:id="restart_position_button" layoutX="70.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Сбросить позицию" />
+      <ChoiceBox fx:id="job_title_choiceBox" layoutX="603.0" layoutY="96.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label fx:id="job_title_label" alignment="CENTER" layoutX="603.0" layoutY="71.0" prefHeight="25.0" prefWidth="150.0" text="Должность" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
