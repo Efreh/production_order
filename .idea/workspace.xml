@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="710ca427-46a3-4bb1-bd40-0596cc2e0bf1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/CreateOrderWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/StartWindowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/create-order-window.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/start-window.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/dataClases/ChoiseBoxArrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/StartWindowApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/create-order-viev.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/CreateOrderWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/CreateOrderWindowController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,7 +48,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
   <component name="RecentsManager">

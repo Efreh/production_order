@@ -1,7 +1,13 @@
 package com.efr.production_order;
 
 import java.net.URL;
+import java.util.Collection;
+import java.util.Date;
 import java.util.ResourceBundle;
+
+import com.efr.production_order.dataClases.ChoiseBoxArrays;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -10,6 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.ChoiceBoxListCell;
 import javafx.scene.layout.AnchorPane;
 
 public class CreateOrderWindowController {
@@ -132,7 +139,7 @@ public class CreateOrderWindowController {
     private ChoiceBox<?> second_type_of_processing_textField;
 
     @FXML
-    private ChoiceBox<?> sector_choiceBox;
+    private ChoiceBox<String> sector_choiceBox;
 
     @FXML
     private Label sector_label;
@@ -154,16 +161,19 @@ public class CreateOrderWindowController {
 
     @FXML
     private Label work_center_label;
-
     @FXML
-    private ChoiceBox<?> working_shift_choiceBox;
+    private ChoiceBox<String> working_shift_choiceBox;
 
     @FXML
     private Label working_shift_label;
 
     @FXML
     void initialize() {
+        date_picker.setOnAction(actionEvent -> {
+            System.out.println(date_picker.getValue());
+        });
 
+        working_shift_choiceBox.setItems(ChoiseBoxArrays.workingShiftList);
+        sector_choiceBox.setItems(ChoiseBoxArrays.sectorList);
     }
-
 }
