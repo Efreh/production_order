@@ -1,10 +1,14 @@
 package com.efr.production_order;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Collection;
 import java.util.Date;
 import java.util.ResourceBundle;
 
+import com.efr.production_order.clases.Order;
+import com.efr.production_order.clases.OrderPosition;
 import com.efr.production_order.dataClases.ChoiseBoxArrays;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -82,16 +86,16 @@ public class CreateOrderWindowController {
     private TableColumn<?, ?> first_type_of_processing_column;
 
     @FXML
-    private ChoiceBox<?> first_type_of_processing_textField;
+    private ChoiceBox<String> first_type_of_processing_choiceBox;
 
     @FXML
     private TableColumn<?, ?> fourth_type_of_processing_column;
 
     @FXML
-    private ChoiceBox<?> fourth_type_of_processing_textField;
+    private ChoiceBox<String> fourth_type_of_processing_choiceBox;
 
     @FXML
-    private ChoiceBox<?> job_title_choiceBox;
+    private ChoiceBox<String> job_title_choiceBox;
 
     @FXML
     private Label job_title_label;
@@ -136,7 +140,7 @@ public class CreateOrderWindowController {
     private TableColumn<?, ?> second_type_of_processing_column;
 
     @FXML
-    private ChoiceBox<?> second_type_of_processing_textField;
+    private ChoiceBox<String> second_type_of_processing_choiceBox;
 
     @FXML
     private ChoiceBox<String> sector_choiceBox;
@@ -148,7 +152,7 @@ public class CreateOrderWindowController {
     private TableColumn<?, ?> third_type_of_processing_column;
 
     @FXML
-    private ChoiceBox<?> third_type_of_processing_textField;
+    private ChoiceBox<String> third_type_of_processing_choiceBox;
 
     @FXML
     private TableColumn<?, ?> type_of_processing_column;
@@ -157,23 +161,45 @@ public class CreateOrderWindowController {
     private Label type_of_processing_label;
 
     @FXML
-    private ChoiceBox<?> work_center_choiceBox;
+    private ChoiceBox<String> work_center_choiceBox;
 
     @FXML
     private Label work_center_label;
     @FXML
-    private ChoiceBox<String> working_shift_choiceBox;
+    private ChoiceBox<Integer> working_shift_choiceBox;
 
     @FXML
     private Label working_shift_label;
 
     @FXML
     void initialize() {
+        date_picker.setValue(LocalDate.now());
         date_picker.setOnAction(actionEvent -> {
             System.out.println(date_picker.getValue());
         });
 
         working_shift_choiceBox.setItems(ChoiseBoxArrays.workingShiftList);
         sector_choiceBox.setItems(ChoiseBoxArrays.sectorList);
+        work_center_choiceBox.setItems(ChoiseBoxArrays.workCenterList);
+        job_title_choiceBox.setItems(ChoiseBoxArrays.jobTitleList);
+
+        first_type_of_processing_choiceBox.setItems(ChoiseBoxArrays.typeOfProcessingList);
+        second_type_of_processing_choiceBox.setItems(ChoiseBoxArrays.typeOfProcessingList);
+        third_type_of_processing_choiceBox.setItems(ChoiseBoxArrays.typeOfProcessingList);
+        fourth_type_of_processing_choiceBox.setItems(ChoiseBoxArrays.typeOfProcessingList);
+
+        add_position_button.setOnAction(actionEvent -> {
+            OrderPosition orderPosition = new OrderPosition(order_number_textField.getText(),order_position_textField.getText(),
+                    Integer.parseInt(detail_amount_textField.getText()),Integer.parseInt(detail_thickness_textField.getText()),
+                    Integer.parseInt(detail_hole_amount_textField.getText()),first_type_of_processing_choiceBox.getValue(),
+                    second_type_of_processing_choiceBox.getValue(),third_type_of_processing_choiceBox.getValue(),
+                    fourth_type_of_processing_choiceBox.getValue(),Double.parseDouble(construction_installation_time_textField.getText()));
+            Order.addOrderPosition(orderPosition);
+        });
+
+        createAndSave_order_button.setOnAction(actionEvent -> {
+            Order order = new Order(date_picker.getValue(),first_last_name_textField.getText(),working_shift_choiceBox.getValue(),
+                    sector_choiceBox.getValue(),work_center_choiceBox.getValue(),job_title_choiceBox.getValue());
+        });
     }
 }
