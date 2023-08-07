@@ -11,7 +11,11 @@ public class Order {
     private String workCenter;
     private String jobTitle;
     private static ArrayList<OrderPosition> orderPositionArrayList = new ArrayList<>();
+    public static void addOrderPosition(OrderPosition orderPosition){
+        orderPositionArrayList.add(orderPosition);
+    }
 
+    public Order(){}
     public Order(LocalDate dateOrder, String name_lastName, int workingShift, String sector, String workCenter, String jobTitle) {
         this.dateOrder = dateOrder;
         this.name_lastName = name_lastName;
@@ -21,10 +25,6 @@ public class Order {
         this.jobTitle = jobTitle;
         System.out.println("Order create");
         System.out.println(this.toString());
-    }
-
-    public static void addOrderPosition(OrderPosition orderPosition){
-        orderPositionArrayList.add(orderPosition);
     }
 
     @Override

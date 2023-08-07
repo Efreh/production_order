@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="710ca427-46a3-4bb1-bd40-0596cc2e0bf1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/OrderPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/DateInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/CreateOrderWindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/CreateOrderWindowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/dataClases/ChoiseBoxArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/dataClases/ChoiseBoxArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/create-order-window.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/efr/production_order/create-order-window.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/OrderPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/efr/production_order/clases/OrderPosition.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
