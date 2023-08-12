@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="create_order_window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.efr.production_order.CreateOrderWindowController">
    <children>
@@ -17,21 +18,17 @@
       <TextField fx:id="first_last_name_textField" layoutX="63.0" layoutY="96.0" prefHeight="30.0" prefWidth="200.0" promptText="Фамилия Имя Отчество" />
       <TableView fx:id="order_table" layoutY="325.0" prefHeight="219.0" prefWidth="800.0">
         <columns>
-          <TableColumn fx:id="position_number_column" prefWidth="31.0" text="№" />
+          <TableColumn fx:id="id_column" prefWidth="31.0" text="№" />
           <TableColumn fx:id="order_number_column" prefWidth="70.0" text="Заказ" />
             <TableColumn fx:id="order_position_column" prefWidth="122.0" text="Позиция" />
             <TableColumn fx:id="detail_amount_column" prefWidth="59.0" text="Колл-тво" />
             <TableColumn fx:id="detail_thickness_column" prefWidth="63.0" text="Толщина &#10;  детали" />
             <TableColumn fx:id="detail_hole_amount_column" prefWidth="65.0" text="Колл-во&#10;отверстий" />
-            <TableColumn fx:id="type_of_processing_column" prefWidth="303.0" text="Виды обработки">
-               <columns>
-                  <TableColumn fx:id="first_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 1" />
-                  <TableColumn fx:id="second_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 2" />
-                  <TableColumn fx:id="third_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 3" />
-                  <TableColumn fx:id="fourth_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 4" />
-               </columns>
-            </TableColumn>
-            <TableColumn fx:id="construction_installation_time_column" prefWidth="89.0" text="Вермя&#10;установки &#10;кострукций" />
+            <TableColumn fx:id="first_type_of_processing_column" prefWidth="75.0" text="Обработка&#10;№ 1" />
+            <TableColumn fx:id="second_type_of_processing_column" prefWidth="82.0" text="Обработка&#10;№ 2" />
+            <TableColumn fx:id="third_type_of_processing_column" prefWidth="76.0" text="Обработка&#10;№ 3" />
+            <TableColumn fx:id="fourth_type_of_processing_column" minWidth="0.0" prefWidth="76.0" text="Обработка&#10;№ 4" />
+            <TableColumn fx:id="construction_installation_time_column" text="Вермя&#10;установки &#10;кострукций" />
         </columns>
       </TableView>
       <Label fx:id="order_item_pos_label" alignment="CENTER" layoutX="14.0" layoutY="151.0" prefHeight="40.0" prefWidth="50.0" text="№ п/п" wrapText="true" />
@@ -57,5 +54,10 @@
       <Button fx:id="restart_position_button" layoutX="70.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Сбросить позицию" />
       <ChoiceBox fx:id="job_title_choiceBox" layoutX="603.0" layoutY="96.0" prefHeight="30.0" prefWidth="150.0" />
       <Label fx:id="job_title_label" alignment="CENTER" layoutX="603.0" layoutY="71.0" prefHeight="25.0" prefWidth="150.0" text="Должность" textAlignment="CENTER" />
+      <Label fx:id="error_label" alignment="CENTER" layoutX="199.0" layoutY="550.0" prefHeight="50.0" prefWidth="393.0" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
